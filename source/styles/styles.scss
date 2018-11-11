@@ -1,1 +1,522 @@
+@import 'utils/_mixins.scss';
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: 'Montserrat', sans-serif !important;
+}
+h1{
+    font-size: 2vh;
+}
+.container{
+    max-width:100% !important;
+}
+.container-fluid{
+    padding-left: 10vw !important;
+    padding-right: 10vw !important;
+}
+.navbar{
+    width:100%;
+    z-index:1000;
+}
+$padding:5vw;
+$margin-top:2.5vw;
 
+@media all and (max-width:30em){
+     a.button3{
+    display:block;
+    margin:0.2em auto;
+}}
+
+@media(min-width:1280px)
+{
+.navbar__logo{
+    margin: 0;
+    padding: 0.5vw 0;
+    img{
+        height:10vw;
+        width:39vw;
+        object-fit: cover;
+    }
+}
+.navbar__list{
+    @include right-navigator();
+    font-size: 1.1vw;
+    padding-right: $padding;
+}
+.background__image{
+    @include background();
+}
+.navbar__list__item{
+    padding-left: 2vw;
+}
+.background__image__computer{
+    @include width-height();
+    object-fit:cover;
+}
+.posts__content{
+    float:left;
+    text-align:center;
+    padding-left:$padding;
+    padding-right:$padding;
+}
+.row__column{
+    @include column();   
+    max-width: 25% !important;
+    height:20vw;
+    margin-left:2.5vw;
+}
+.row__column-second{
+    @include column();
+    margin-left:2.5vw;
+    max-width: 25% !important;
+    height:20vw;
+}
+.columns__photo{
+    width:7.5vw;
+}
+.columns__title{
+    margin-bottom:1rem;
+    font-size:1vw;
+    font-weight:500;
+    text-align: center;
+}
+.columns__paragraph{
+    text-align:center;
+    font-size:1vw;
+    color:#7f7f7f;
+}
+    .row__column-third{
+    margin-top:$margin-top;
+    }
+    @include technology-photo();
+    .columns{
+    height: 60vw;
+    background:#fafafa;
+    }
+    .columns__row{
+        padding-bottom: 3rem;
+        margin-left:15%;
+    }
+    .columns__section{
+        padding: 10vw 2vw 0vw 2vw;
+    } 
+    .project--content{
+        @include float-align();
+        padding-left:$padding;
+        padding-right: $padding;
+        p{
+            font-size: 1vw;
+            padding-left:$padding*2;
+            padding-right:$padding*2;
+            margin-bottom:5vw;
+        }
+    }
+    .project__header{
+        color:black;
+        line-height: 7vw;
+        font-size:2.5vw;
+        font-weight:400;
+        text-align:left;
+        padding-left:5vw;
+
+        .project__paragraph{
+            padding-left:$padding;
+            padding-right:$padding;
+        }
+    }
+    .technology__first{
+        margin-top:16vw;
+    }
+    .technology__row-reverse1{
+        flex-direction: row-reverse;
+    }
+    .technology__content{
+        .technology__paragraph{
+            padding-left:$padding;
+            padding-right:$padding*2.4;
+        }
+    }
+    .technology__paragraph-bigger{
+        @include tech-paragraph();
+        font-size:1vw;
+    }
+    @include background-footer();
+    @include a-link();
+    a.button{
+        padding:2%;
+        @include button();
+        height: 4vw;
+        width:15vw;
+        margin:2vw 0.3em 0.3em 25%;
+    }
+    .row-columns{
+        padding-bottom: 3rem;
+        margin-left: 15%;
+    }
+}
+@media (min-width:992px) and (max-width:1279px)
+{
+    .navbar__logo{
+        margin: 0;
+        padding: 0.5vw 0;
+        img{
+            height:10vw;
+            width:30vw;
+            object-fit: cover;
+        }
+    }
+    .navbar__list{
+        font-size:1.4vw;
+        @include right-navigator();
+    }
+    .background__image{
+        @include background();
+    }
+    .navbar__list__item{
+        padding-left: 2vw;
+    }
+    .background__image__computer{
+        @include width-height();
+        object-fit:cover;
+    }
+    .posts__content{
+        float:left;
+        text-align:center;
+        padding-left:$padding;
+        padding-right:$padding;
+    }
+    .row__column{
+        @include column();   
+        max-width:30% !important;
+        height:20vw;
+        margin-left:2.5vw;
+    }
+    .row__column-second{
+        @include column();
+        margin-left:2.5vw;
+        max-width:30% !important;
+        height:20vw;
+    }
+    .columns__photo{
+        width:7.5vw;
+    }
+    .columns__title{
+        margin-bottom:1rem;
+        font-size:1.5vw;
+        font-weight:500;
+        text-align: center;
+    }
+    .columns__paragraph{
+        text-align:center;
+        font-size:1.2vw;
+        color:#7f7f7f;
+    }
+        .row__column-third{
+        margin-top:$margin-top;
+        }
+    @include technology-photo();
+    .columns{
+         height: 60vw;
+        background:#fafafa;
+    }
+    .columns__row{
+            padding-bottom: 3rem;
+            margin-left:5%;
+    }
+    .columns__section{
+            padding: 7vw 2vw 0vw 2vw;
+    } 
+        .project--content{
+            @include float-align();
+            padding-left:$padding;
+            padding-right: $padding;
+            p{
+                font-size: 1.5vw;
+                padding-left:$padding*2;
+                padding-right:$padding*2;
+                margin-bottom:5vw;
+            }
+        }
+        .project__header{
+            color:black;
+            line-height: 7vw;
+            font-size:2.5vw;
+            font-weight:400;
+            text-align:left;
+            padding-left:5vw;
+    
+            .project__paragraph{
+                padding-left:$padding;
+                padding-right:$padding;
+            }
+        }
+        .technology__first{
+            margin-top:18vw !important;
+        }
+        .technology__row-reverse1{
+            flex-direction: row-reverse;
+        }
+        .technology__content{
+            .technology__paragraph{
+                padding-left:$padding;
+                padding-right:$padding*2.4;
+            }
+        }
+        .technology__paragraph-bigger{
+            @include tech-paragraph();
+        }
+        @include background-footer();
+        @include a-link();
+        a.button{
+            padding:2%;
+            @include button();
+            height: 4vw;
+            width:15vw;
+            margin:2vw 0.3em 0.3em 25%;
+        }
+}
+@media (min-width:768px) and (max-width:991px){
+    .navbar__logo{
+        margin: 0;
+        padding: 0.5vw 0;
+        img{
+            height:10vw;
+            width:30vw;
+            object-fit: cover;
+        }
+    }
+    .navbar__list{
+        font-size:2vw;
+        @include right-navigator();
+    }
+    .background__image{
+        @include background();
+    }
+    .navbar__list__item{
+        padding-left: 2vw;
+    }
+    .background__image__computer{
+        @include width-height();
+        object-fit:cover;
+    }
+    .posts__content{
+        float:left;
+        text-align:center;
+        padding-left:$padding;
+        padding-right:$padding;
+    }
+    .row__column{
+        @include column();   
+        max-width:40% !important;
+        margin-left:2.5vw;
+        height:20vw;
+    }
+    .row__column-second{
+        @include column();
+        margin-left:2.5vw;
+        max-width:40% !important;
+        height:20vw;
+    }
+    .columns__photo{
+        width:7.5vw;
+    }
+    .columns__title{
+        margin-bottom:1rem;
+        font-size:1.5vw;
+        font-weight:500;
+        text-align: center;
+    }
+    .columns__paragraph{
+        text-align:center;
+        font-size:1.4vw;
+        color:#7f7f7f;
+    }
+        .row__column-third{
+        margin-top:$margin-top;
+        }
+        .row__column__tablets{
+            margin-top:2.5vw;
+            margin-left:2.5vw;
+        }
+    @include technology-photo();
+    .columns{
+        height: 90vw;
+        background:#fafafa;
+    }
+    .columns__row{
+            padding-bottom: 3rem;
+            margin-left:10vw;
+    }
+    .columns__section{
+            padding: 7vw 2vw 0vw 2vw;
+    } 
+        .project--content{
+            @include float-align();
+            padding-left:$padding;
+            padding-right: $padding;
+            p{
+                font-size: 1.5vw;
+                padding-left:$padding*2;
+                padding-right:$padding*2;
+                margin-bottom:5vw;
+            }
+        }
+        .project__header{
+            color:black;
+            line-height: 7vw;
+            font-size:3vw;
+            font-weight:400;
+            text-align:left;
+            padding-left:5vw;
+    
+            .project__paragraph{
+                padding-left:$padding;
+                padding-right:$padding;
+            }
+        }
+        .technology__first{
+            margin-top:18vw !important;
+        }
+        .technology__row-reverse1{
+            flex-direction: row-reverse;
+        }
+        .technology__content{
+            padding-bottom:3rem;
+            padding-top:3rem;
+            .technology__paragraph{
+                padding-left:$padding;
+                padding-right:$padding*2.4;
+            }
+        }
+        .technology__paragraph-bigger{
+            @include tech-paragraph();
+        }
+        @include background-footer();
+        @include a-link();
+        a.button{
+            padding:2%;
+            @include button();
+            height: 6vw;
+            width:25vw;
+            margin:2vw 0.3em 0.3em 25%;
+        }
+
+}
+@media (max-width:767px)
+{
+    .navbar__logo{
+        margin: 0;
+        padding: 0.5vw 0;
+        img{
+            height:15vw;
+            width:50vw;
+            object-fit: cover;
+        }
+    }
+    .navbar__list{
+        font-size:2vw;
+        @include right-navigator();
+    }
+    .background__image{
+        @include background();
+    }
+    .navbar__list__item{
+        padding-left: 2vw;
+    }
+    .background__image__computer{
+        @include width-height();
+        object-fit:cover;
+    }
+    .posts__content{
+        float:left;
+        text-align:center;
+    }
+    .row__column{
+        @include column();   
+        height:70vw;
+    }
+    .row__column-second{
+        @include column();
+        height:70vw;
+        margin-top:2.5vw;
+    }
+    .columns__photo{
+        width:7.5vw;
+    }
+
+    .columns__title{
+        font-size:5vw;
+        font-weight:500;
+        text-align: center;
+    }
+    .columns__paragraph{
+        text-align:center;
+        font-size:3.5vw;
+        color:#7f7f7f;
+    }
+        .row__column-third{
+        margin-top:$margin-top;
+        }
+    @include technology-photo();
+    .columns{
+        height: 470vw;
+        background:#fafafa;
+    }
+    .columns__row{
+            padding-bottom: 3rem;
+    }
+    .columns__section{
+            padding: 30vw 2vw 2vw 2vw;
+    } 
+        .project--content{
+            @include float-align();
+            padding-left:$padding;
+            padding-right: $padding;
+            p{
+                font-size: 5w;
+                padding-left:$padding*2;
+                padding-right:$padding*2;
+                margin-bottom:5vw;
+            }
+        }
+        .project__header{
+            color:black;
+            font-size:5vw;
+            font-weight:400;
+            text-align:left;
+            margin-top:2vw;
+    
+            .project__paragraph{
+                padding-left:$padding;
+                padding-right:$padding;
+            }
+        }
+        .technology__first{
+            margin-top:25vw !important;
+        }
+        .technology__content{
+            padding-bottom:3rem;
+            padding-top:3rem;
+            .technology__paragraph{
+                padding-left:$padding;
+                padding-right:$padding*2.4;
+            }
+        }
+        .technology__paragraph-bigger{
+            @include tech-paragraph();
+        }
+        @include background-footer();
+        @include a-link();
+        a.button{
+            padding:8%;
+            @include button();
+            height: 20vw;
+            width:100%;
+            font-size:5vw;        
+            margin:0;
+        }
+
+
+}

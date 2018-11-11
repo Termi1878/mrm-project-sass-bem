@@ -2,6 +2,168 @@
 
 {% block content %}
 
-  <h1>Hello world!</h1>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MRM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/styles/bundle.css" />
+    <script src="assets/scripts/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar">
+            <div class="navbar__logo">
+                    <a href="index.html">
+                            <img src="assets/images/mrm.svg" alt="mrm">
+                    </a>
+                </div>
+                <div class="navbar__navigator">
+                    <ul class="navbar__list">
+                            <li class="navbar__list__item">
+                                <a class="navbar__list__link" href="#">STRONA GŁÓWNA</a>
+                            </li>
+                            <li class="navbar__list__item">
+                                <a class="navbar__list__link" href="#">POSTY</a>
+                            </li>
+                            <li class="navbar__list__item">
+                                <a class="navbar__list__link" href="#">O PROJEKCIE</a>
+                            </li>
+                            <li class="navbar__list__item">
+                                <a class="navbar__list__link" href="#">MŁODZIEŻOWE RADY</a>
+                              </li>
+                            <li class="navbar__list__item">
+                                <a class="navbar__list__link" href="#">KONTAKT</a>
+                            </li>
+                    </ul>
+    </div>
+    </nav>   
+              <section class="background__image">
+                  <img class="background__image__computer" src="assets/images/komputer.jpg" alt>
+              </section>
+      <section class="posts">
+          <div class="container-fluid posts__container">
+                  <div class="posts__content">
+                        <h2 class="posts__header" style="text-align: center;font-size: 1.8;font-weight:600;">POSTY</h2>
+                        <p class="posts__paragraph">Znajdziesz tu najnowsze wpisy na temat działalności, aktywności, pomysłów Młodzieżowych Rad z całej Polski. Poniżej kliknij w interesującą Cię dziedzinę opatrzoną odpowiednim hashtagiem.</p>
+                  </div>
+              </div> 
+      </section>
+      <section class="columns">
+       <div class="container columns__container">
+           <div class="columns__row">
+                <div class="col-xl-4 col-md-6 row__column">
+                    <div class="columns__section">
+                        <img class="columns__photo" src="#" alt>
+                        <h3 class="columns__title">#ŻycieSpołeczne </h3>
+                        <p class="columns__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut dui.</p>
+                        
+                    </div>
+                </div>
+                    <div class="col-xl-4 col-md-6 column-phones row__column-second row__column__phones">
+                            <div class="columns__section">
+                                <img class="columns__photo" src="#" alt>
+                                <h3 class=" columns__title">#Rozmowa </h3>
+                                <p class="columns__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut dui.</p>
+                                
+                            </div>
+                    </div>
+                        <div class="col-xl-4 col-md-6 column-tablets column-phones row__column-second row__column__phones row__column__tablets">
+                                <div class="columns__section">
+                                    <img class=" columns__photo" src="#" alt>
+                                    <h3 class="columns__title">#InteresMłodzieży </h3>
+                                    <p class="columns__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut dui.</p>
+                                    
+                                </div>
+
+                        </div>
+           </div>
+           <div class="columns__row">
+            <div class="col-xl-4 col-md-6 row__column-second row__column-third row__column row__column__phones row__column__tablets">
+                <div class="columns__section">
+                    <img class="columns__photo" src="#" alt>
+                    <h3 class="columns__title">#Informacja </h3>
+                    <p class="columns__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut dui.</p>
+                    
+                </div>
+
+            </div>
+                <div class="col-xl-4 col-md-6 row__column-second row__column-third row__column__phones row__column__tablets">
+                        <div class="columns__section">
+                            <img class="columns__photo" src="#" alt>
+                            <h3 class=" columns__title">#Komunikacja </h3>
+                            <p class="columns__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut dui.</p>
+                            
+                        </div>
+
+                </div>
+                    <div class="col-xl-4 col-md-6 row__column-second row__column-third row__column__phones row__column__tablets">
+                            <div class="columns__section">
+                                <img class="columns__photo" src="#" alt>
+                                <h3 class="columns__title">#Działanie </h3>
+                                <p class="columns__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut dui.</p>
+                                
+                            </div>
+                    </div>
+       </div>
+
+       </div>   
+      </section>
+      <div class="project--content">
+            <h2 class="project__header" style="text-align: center;font-size: 1.8;font-weight:600;"> Dodatkowe informacje</h2>
+            <p class="tech-paragraph project__paragraph">Dowiedz się więcej na temat Młodzieżowych Rad w Internecie, przeczytaj jaka przyświeca nam misja oraz co chcemy osiągnąć, później skontaktuj się z nami.</p>
+      </div>
+      <section class="technology">
+        <div class="container technology__container technology__first" style="margin-top:16vw;">
+                <div class="row technology__row">
+                        <div class="col-lg-6 technology__content">
+                                <h2 class="project__header technology__header"> Kilka słów o naszym projekcie.</h2>
+                                <div class=" technology__paragraph">
+                                        <p class=" technology__paragraph-bigger">Przeczytaj i dowiedz się, jakie są nasze główne postulaty, co jest dla nas istotne oraz czego chcemy razem z Tobą dokonać. Zasięgnij informacji, czym są Młodzieżowe Rady Miast w Internecie i jak wygląda nasza działalność.</p>
+                                </div>
+                                <a href="#" class="button">O projekcie</a>
+                        </div>
+                        <div class="col-lg-6 technology__photo">
+                              
+                              <img class="technology__image" src="assets/images/calendar.jpg"/>
+                        </div>
+                </div> 
+        </div>
+      </section>
+    <section class="technology__reverse" style="background:#fff">
+            <div class="container technology__container">
+                    <div class="row row-reverse technology technology__row-reverse" style="flex-direction:row-reverse">
+                            <div class="col-lg-6 technology__content">
+                                    <h2 class="project__header  technology__header"> Rozpocznijmy wspólną</h2>
+                                    <div class=" technology__paragraph">
+                                            <p class=" technology__paragraph-bigger">Nawiąż z nami kontakt i zacznijmy rozmawiać. Dzięki temu lepiej się poznamy i będziemy mogli wspólnie tworzyć nowe inicjatywy oraz rozwinąć siatkę kontaktów wśród młodych i aktywnych społecznie ludzi.</p>
+                                    </div>
+                                    <a href="#" class=" button">Kontakt</a>
+    
+                            </div>
+                            <div class="col-lg-6 technology__photo">   
+                                  <img class="technology__image" src="assets/images/sitting.jpg"/>
+                            </div>
+                    </div> 
+            </div>
+    </section>
+          <div class="footer">
+          <footer class="footer__content">
+            <h5>&copy; Zuzanna Piekarczyk oraz Krystian Rozwag
+            </h5>
+              </div>     
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</body>
+</html>
+
+    <script src="assets/scripts/bundle.js"></script>
+  </body>
+</html>
 
 {% endblock %}

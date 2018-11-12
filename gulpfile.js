@@ -26,7 +26,7 @@ const files = {
     destination: `${dirs.build}/assets/styles/`,
   },
   scripts: {
-    source: `${dirs.source}/scripts/index.js`,
+    source: `${dirs.source}/scripts/bundle.js`,
     watch: `${dirs.source}/scripts/**/*`,
     destination: `${dirs.build}/assets/scripts/`,
   },

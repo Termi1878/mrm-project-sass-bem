@@ -1,3 +1,16 @@
+@mixin section{
+    border-left: 4px solid black;
+    border-bottom: 4px black solid;
+    width:50% !important;
+    border-block-end: 50%;
+    padding-left: 2vw;
+    border-radius: 25px;
+}
+@mixin position{
+    margin-top:5vw;
+    margin-left:2vw;
+    overflow:hidden;
+}
 @mixin background {
     position:relative;
     display:flex;
@@ -63,7 +76,6 @@
         text-decoration:none;
         font-weight:600;
         color:#FFFFFF;
-        background-color:#3788C5;
         text-align:center;
         transition: all 0.2s;
         &:hover{
@@ -85,3 +97,4 @@
     font-weight: 500;
     align-items: center;
 }
+//shift-alt-f

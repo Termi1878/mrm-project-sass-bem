@@ -28,7 +28,68 @@ $margin-top:2.5vw;
     display:block;
     margin:0.2em auto;
 }}
+.button--color{
+    background-color:#3788C5;
+}
+//styleguide
+.header{
+    margin-top:5vw;
+    text-align:center;
+    &__paragraph{
+        text-align:center;
+    }
+}
+.colors{
+    @include position;
+}
+.colors__container{
+@include section;
+}
+.colors__section{
+    float:left;
+    margin-left: 2vw;
+    margin-top: 5vw;
+}
+.colors__title{
+    font-size: 1.5vw;
+    font-weight:600;
+}
+.colors__paragraph{
+    display:inline;
+    &--hex{
+        font-weight:600;
+    }
+    &--number{
+        font-weight:500;
+    }
+}
+.fonts{
+@include position;
+}
+.fonts__container{
+    @include section;
+}
+.fonts__container--smaller{
+    margin-top:2vw;
+}
 
+.fonts__style--inline{
+    display: inline;
+}
+.fonts__section
+{
+    padding-bottom:1vw;
+}
+.buttons{
+    @include position;
+}
+.buttons__container{
+    @include section;
+}
+
+// to add:
+// split styles.scss to button.scss etc., add navbar things with link,list,item, grid
+//koniec styleguide
 @media(min-width:1280px)
 {
 .navbar__logo{
@@ -138,7 +199,7 @@ $margin-top:2.5vw;
             padding-right:$padding*2.4;
         }
     }
-    .technology__paragraph-bigger{
+    .technology__paragraph--bigger{
         @include tech-paragraph();
         font-size:1vw;
     }

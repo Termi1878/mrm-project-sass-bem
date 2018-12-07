@@ -33,6 +33,99 @@ h1 {
   }
 }
 
+.button--color {
+  background-color: #3788C5;
+}
+
+.header {
+  margin-top: 5vw;
+  text-align: center;
+}
+
+.header__paragraph {
+  text-align: center;
+}
+
+.colors {
+  margin-top: 5vw;
+  margin-left: 2vw;
+  overflow: hidden;
+}
+
+.colors__container {
+  border-left: 4px solid black;
+  border-bottom: 4px black solid;
+  width: 50% !important;
+  border-block-end: 50%;
+  padding-left: 2vw;
+  border-radius: 25px;
+}
+
+.colors__section {
+  float: left;
+  margin-left: 2vw;
+  margin-top: 5vw;
+}
+
+.colors__title {
+  font-size: 1.5vw;
+  font-weight: 600;
+}
+
+.colors__paragraph {
+  display: inline;
+}
+
+.colors__paragraph--hex {
+  font-weight: 600;
+}
+
+.colors__paragraph--number {
+  font-weight: 500;
+}
+
+.fonts {
+  margin-top: 5vw;
+  margin-left: 2vw;
+  overflow: hidden;
+}
+
+.fonts__container {
+  border-left: 4px solid black;
+  border-bottom: 4px black solid;
+  width: 50% !important;
+  border-block-end: 50%;
+  padding-left: 2vw;
+  border-radius: 25px;
+}
+
+.fonts__container--smaller {
+  margin-top: 2vw;
+}
+
+.fonts__style--inline {
+  display: inline;
+}
+
+.fonts__section {
+  padding-bottom: 1vw;
+}
+
+.buttons {
+  margin-top: 5vw;
+  margin-left: 2vw;
+  overflow: hidden;
+}
+
+.buttons__container {
+  border-left: 4px solid black;
+  border-bottom: 4px black solid;
+  width: 50% !important;
+  border-block-end: 50%;
+  padding-left: 2vw;
+  border-radius: 25px;
+}
+
 @media (min-width: 1280px) {
   .navbar__logo {
     margin: 0;
@@ -167,7 +260,7 @@ h1 {
     padding-left: 5vw;
     padding-right: 12vw;
   }
-  .technology__paragraph-bigger {
+  .technology__paragraph--bigger {
     color: #7f7f7f;
     font-weight: 400;
     font-size: 1vw;
@@ -198,7 +291,6 @@ h1 {
     text-decoration: none;
     font-weight: 600;
     color: #FFFFFF;
-    background-color: #3788C5;
     text-align: center;
     transition: all 0.2s;
     height: 4vw;
@@ -378,7 +470,6 @@ h1 {
     text-decoration: none;
     font-weight: 600;
     color: #FFFFFF;
-    background-color: #3788C5;
     text-align: center;
     transition: all 0.2s;
     height: 4vw;
@@ -562,7 +653,6 @@ h1 {
     text-decoration: none;
     font-weight: 600;
     color: #FFFFFF;
-    background-color: #3788C5;
     text-align: center;
     transition: all 0.2s;
     height: 6vw;
@@ -731,7 +821,6 @@ h1 {
     text-decoration: none;
     font-weight: 600;
     color: #FFFFFF;
-    background-color: #3788C5;
     text-align: center;
     transition: all 0.2s;
     height: 20vw;

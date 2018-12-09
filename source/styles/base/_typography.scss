@@ -1,0 +1,117 @@
+.colors__title{
+    font-size: 1.5vw;
+    font-weight:600;
+}
+.colors__paragraph{
+    display:inline;
+    &--hex{
+        font-weight:600;
+    }
+    &--number{
+        font-weight:500;
+    }
+}
+$padding:5vw;
+$margin-top:2.5vw;
+@media(min-width:1280px){
+    .columns__title{
+        margin-bottom:1rem;
+    }
+        .columns__paragraph{
+            text-align:center;
+    }
+    .technology__paragraph{
+        padding-left:$padding;
+        padding-right:$padding*2.4;
+    }
+.technology__paragraph--bigger{
+    @include tech-paragraph();
+    font-size:1vw;
+}
+.project--content{
+    @include float-align();
+    padding-left:$padding;
+    padding-right: $padding;
+    p{
+        font-size: 1vw;
+        padding-left:$padding*2;
+        padding-right:$padding*2;
+        margin-bottom:5vw;
+    }
+}
+.project__header{
+    line-height: 7vw;
+    text-align:left;
+    .project__paragraph{
+        padding-left:$padding;
+        padding-right:$padding;
+    }
+}
+}
+@media (min-width:992px) and (max-width:1279px){
+    .project--content{
+        @include float-align();
+        padding-left:$padding;
+        padding-right: $padding;
+        p{
+            font-size: 1.5vw;
+            padding-left:$padding*2;
+            padding-right:$padding*2;
+            margin-bottom:5vw;
+        }
+    }
+    .project__header{
+        line-height: 7vw;
+        text-align:left;
+
+        .project__paragraph{
+            padding-left:$padding;
+            padding-right:$padding;
+        }
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+
+    .project--content{
+        @include float-align();
+        padding-left:$padding;
+        padding-right: $padding;
+        p{
+            font-size: 1.5vw;
+            padding-left:$padding*2;
+            padding-right:$padding*2;
+            margin-bottom:5vw;
+        }
+    }
+    .project__header{
+        line-height: 7vw;
+        text-align:left;
+
+        .project__paragraph{
+            padding-left:$padding;
+            padding-right:$padding;
+        }
+    }
+}
+@media (max-width:767px){
+    .project--content{
+        @include float-align();
+        padding-left:$padding;
+        padding-right: $padding;
+        p{
+            font-size: 5w;
+            padding-left:$padding*2;
+            padding-right:$padding*2;
+            margin-bottom:5vw;
+        }
+    }
+    .project__header{
+        text-align:left;
+        margin-top:2vw;
+
+        .project__paragraph{
+            padding-left:$padding;
+            padding-right:$padding;
+        }
+    }
+}

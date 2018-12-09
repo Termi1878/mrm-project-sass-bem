@@ -1,4 +1,7 @@
 @import 'utils/_mixins.scss';
+@import 'components/_buttons.scss';
+@import 'base/_fonts.scss';
+@import 'base/_typography.scss';
 *{
     margin:0;
     padding:0;
@@ -22,18 +25,20 @@ h1{
 }
 $padding:5vw;
 $margin-top:2.5vw;
-
-@media all and (max-width:30em){
-     a.button3{
-    display:block;
-    margin:0.2em auto;
-}}
-.button--color{
-    background-color:#3788C5;
+.navbar__item{
+    padding-left: 2vw;
+}
+@include background-footer();
+@include a-link();
+.background__image{
+    @include background();
+}
+.background__image--computer{
+    @include width-height();
+    object-fit:cover;
 }
 //styleguide
 .header{
-    margin-top:5vw;
     text-align:center;
     &__paragraph{
         text-align:center;
@@ -43,52 +48,35 @@ $margin-top:2.5vw;
     @include position;
 }
 .colors__container{
-@include section;
+    @include section;
 }
 .colors__section{
     float:left;
     margin-left: 2vw;
     margin-top: 5vw;
 }
-.colors__title{
-    font-size: 1.5vw;
-    font-weight:600;
-}
-.colors__paragraph{
-    display:inline;
-    &--hex{
-        font-weight:600;
-    }
-    &--number{
-        font-weight:500;
-    }
-}
-.fonts{
-@include position;
-}
-.fonts__container{
-    @include section;
-}
-.fonts__container--smaller{
-    margin-top:2vw;
+.columns--background{
+    background:#fafafa;
 }
 
-.fonts__style--inline{
-    display: inline;
+.colors__presentation{
+width:100px;
+height:100px;
 }
-.fonts__section
-{
-    padding-bottom:1vw;
+.colors__presentation--posts{
+    background:#fafafa;
 }
-.buttons{
-    @include position;
+.colors__presentation--footer{
+    background:#3788c5;
 }
-.buttons__container{
-    @include section;
+.colors__presentation--hover{
+    background:#4095c6;
 }
-
+.colors__presentation--tech{
+    background:#7f7f7f;
+}
 // to add:
-// split styles.scss to button.scss etc., add navbar things with link,list,item, grid
+// add navbar things with link,list,item, grid
 //koniec styleguide
 @media(min-width:1280px)
 {
@@ -105,16 +93,6 @@ $margin-top:2.5vw;
     @include right-navigator();
     font-size: 1.1vw;
     padding-right: $padding;
-}
-.background__image{
-    @include background();
-}
-.navbar__list__item{
-    padding-left: 2vw;
-}
-.background__image__computer{
-    @include width-height();
-    object-fit:cover;
 }
 .posts__content{
     float:left;
@@ -134,27 +112,15 @@ $margin-top:2.5vw;
     max-width: 25% !important;
     height:20vw;
 }
-.columns__photo{
-    width:7.5vw;
-}
-.columns__title{
-    margin-bottom:1rem;
-    font-size:1vw;
-    font-weight:500;
-    text-align: center;
-}
-.columns__paragraph{
-    text-align:center;
-    font-size:1vw;
-    color:#7f7f7f;
-}
+    .columns__photo{
+        width:7.5vw;
+    }
     .row__column-third{
     margin-top:$margin-top;
     }
-    @include technology-photo();
+    @include background-photo();
     .columns{
     height: 60vw;
-    background:#fafafa;
     }
     .columns__row{
         padding-bottom: 3rem;
@@ -163,54 +129,11 @@ $margin-top:2.5vw;
     .columns__section{
         padding: 10vw 2vw 0vw 2vw;
     } 
-    .project--content{
-        @include float-align();
-        padding-left:$padding;
-        padding-right: $padding;
-        p{
-            font-size: 1vw;
-            padding-left:$padding*2;
-            padding-right:$padding*2;
-            margin-bottom:5vw;
-        }
-    }
-    .project__header{
-        color:black;
-        line-height: 7vw;
-        font-size:2.5vw;
-        font-weight:400;
-        text-align:left;
-        padding-left:5vw;
-
-        .project__paragraph{
-            padding-left:$padding;
-            padding-right:$padding;
-        }
-    }
     .technology__first{
         margin-top:16vw;
     }
     .technology__row-reverse1{
         flex-direction: row-reverse;
-    }
-    .technology__content{
-        .technology__paragraph{
-            padding-left:$padding;
-            padding-right:$padding*2.4;
-        }
-    }
-    .technology__paragraph--bigger{
-        @include tech-paragraph();
-        font-size:1vw;
-    }
-    @include background-footer();
-    @include a-link();
-    a.button{
-        padding:2%;
-        @include button();
-        height: 4vw;
-        width:15vw;
-        margin:2vw 0.3em 0.3em 25%;
     }
     .row-columns{
         padding-bottom: 3rem;
@@ -232,12 +155,6 @@ $margin-top:2.5vw;
         font-size:1.4vw;
         @include right-navigator();
     }
-    .background__image{
-        @include background();
-    }
-    .navbar__list__item{
-        padding-left: 2vw;
-    }
     .background__image__computer{
         @include width-height();
         object-fit:cover;
@@ -265,22 +182,16 @@ $margin-top:2.5vw;
     }
     .columns__title{
         margin-bottom:1rem;
-        font-size:1.5vw;
-        font-weight:500;
-        text-align: center;
     }
     .columns__paragraph{
         text-align:center;
-        font-size:1.2vw;
-        color:#7f7f7f;
     }
         .row__column-third{
         margin-top:$margin-top;
         }
-    @include technology-photo();
+    @include background-photo();
     .columns{
          height: 60vw;
-        background:#fafafa;
     }
     .columns__row{
             padding-bottom: 3rem;
@@ -289,30 +200,6 @@ $margin-top:2.5vw;
     .columns__section{
             padding: 7vw 2vw 0vw 2vw;
     } 
-        .project--content{
-            @include float-align();
-            padding-left:$padding;
-            padding-right: $padding;
-            p{
-                font-size: 1.5vw;
-                padding-left:$padding*2;
-                padding-right:$padding*2;
-                margin-bottom:5vw;
-            }
-        }
-        .project__header{
-            color:black;
-            line-height: 7vw;
-            font-size:2.5vw;
-            font-weight:400;
-            text-align:left;
-            padding-left:5vw;
-    
-            .project__paragraph{
-                padding-left:$padding;
-                padding-right:$padding;
-            }
-        }
         .technology__first{
             margin-top:18vw !important;
         }
@@ -325,17 +212,8 @@ $margin-top:2.5vw;
                 padding-right:$padding*2.4;
             }
         }
-        .technology__paragraph-bigger{
+        .technology__paragraph--bigger{
             @include tech-paragraph();
-        }
-        @include background-footer();
-        @include a-link();
-        a.button{
-            padding:2%;
-            @include button();
-            height: 4vw;
-            width:15vw;
-            margin:2vw 0.3em 0.3em 25%;
         }
 }
 @media (min-width:768px) and (max-width:991px){
@@ -352,12 +230,6 @@ $margin-top:2.5vw;
         font-size:2vw;
         @include right-navigator();
     }
-    .background__image{
-        @include background();
-    }
-    .navbar__list__item{
-        padding-left: 2vw;
-    }
     .background__image__computer{
         @include width-height();
         object-fit:cover;
@@ -385,14 +257,9 @@ $margin-top:2.5vw;
     }
     .columns__title{
         margin-bottom:1rem;
-        font-size:1.5vw;
-        font-weight:500;
-        text-align: center;
     }
     .columns__paragraph{
         text-align:center;
-        font-size:1.4vw;
-        color:#7f7f7f;
     }
         .row__column-third{
         margin-top:$margin-top;
@@ -401,10 +268,9 @@ $margin-top:2.5vw;
             margin-top:2.5vw;
             margin-left:2.5vw;
         }
-    @include technology-photo();
+    @include background-photo();
     .columns{
         height: 90vw;
-        background:#fafafa;
     }
     .columns__row{
             padding-bottom: 3rem;
@@ -413,30 +279,6 @@ $margin-top:2.5vw;
     .columns__section{
             padding: 7vw 2vw 0vw 2vw;
     } 
-        .project--content{
-            @include float-align();
-            padding-left:$padding;
-            padding-right: $padding;
-            p{
-                font-size: 1.5vw;
-                padding-left:$padding*2;
-                padding-right:$padding*2;
-                margin-bottom:5vw;
-            }
-        }
-        .project__header{
-            color:black;
-            line-height: 7vw;
-            font-size:3vw;
-            font-weight:400;
-            text-align:left;
-            padding-left:5vw;
-    
-            .project__paragraph{
-                padding-left:$padding;
-                padding-right:$padding;
-            }
-        }
         .technology__first{
             margin-top:18vw !important;
         }
@@ -451,22 +293,11 @@ $margin-top:2.5vw;
                 padding-right:$padding*2.4;
             }
         }
-        .technology__paragraph-bigger{
+        .technology__paragraph--bigger{
             @include tech-paragraph();
         }
-        @include background-footer();
-        @include a-link();
-        a.button{
-            padding:2%;
-            @include button();
-            height: 6vw;
-            width:25vw;
-            margin:2vw 0.3em 0.3em 25%;
-        }
-
 }
-@media (max-width:767px)
-{
+@media (max-width:767px){
     .navbar__logo{
         margin: 0;
         padding: 0.5vw 0;
@@ -479,12 +310,6 @@ $margin-top:2.5vw;
     .navbar__list{
         font-size:2vw;
         @include right-navigator();
-    }
-    .background__image{
-        @include background();
-    }
-    .navbar__list__item{
-        padding-left: 2vw;
     }
     .background__image__computer{
         @include width-height();
@@ -507,23 +332,15 @@ $margin-top:2.5vw;
         width:7.5vw;
     }
 
-    .columns__title{
-        font-size:5vw;
-        font-weight:500;
-        text-align: center;
-    }
     .columns__paragraph{
         text-align:center;
-        font-size:3.5vw;
-        color:#7f7f7f;
     }
         .row__column-third{
         margin-top:$margin-top;
         }
-    @include technology-photo();
+    @include background-photo();
     .columns{
         height: 470vw;
-        background:#fafafa;
     }
     .columns__row{
             padding-bottom: 3rem;
@@ -531,31 +348,8 @@ $margin-top:2.5vw;
     .columns__section{
             padding: 30vw 2vw 2vw 2vw;
     } 
-        .project--content{
-            @include float-align();
-            padding-left:$padding;
-            padding-right: $padding;
-            p{
-                font-size: 5w;
-                padding-left:$padding*2;
-                padding-right:$padding*2;
-                margin-bottom:5vw;
-            }
-        }
-        .project__header{
-            color:black;
-            font-size:5vw;
-            font-weight:400;
-            text-align:left;
-            margin-top:2vw;
-    
-            .project__paragraph{
-                padding-left:$padding;
-                padding-right:$padding;
-            }
-        }
         .technology__first{
-            margin-top:25vw !important;
+            margin-top:31vw !important;
         }
         .technology__content{
             padding-bottom:3rem;
@@ -565,19 +359,7 @@ $margin-top:2.5vw;
                 padding-right:$padding*2.4;
             }
         }
-        .technology__paragraph-bigger{
+        .technology__paragraph--bigger{
             @include tech-paragraph();
         }
-        @include background-footer();
-        @include a-link();
-        a.button{
-            padding:8%;
-            @include button();
-            height: 20vw;
-            width:100%;
-            font-size:5vw;        
-            margin:0;
-        }
-
-
 }

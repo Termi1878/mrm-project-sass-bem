@@ -1,0 +1,72 @@
+@import '../utils/_mixins.scss';
+@media all and (max-width:30em){
+     a.button3{
+    display:block;
+    margin:0.2em auto;
+}}
+.button--margin{
+    margin:0 !important;
+    padding:1.5% !important;
+}
+.button--hover{
+    background:#4095c6;
+    color:#FFFFFF;
+    font-weight:600;
+}
+.button--disabled{
+    background:#4a545a;
+    color:#FFFFFF;
+    font-weight:600;
+}
+a.button--blue{
+    background-color:#3788C5;
+    font-weight:600;
+    color:#FFFFFF;
+    &:hover{
+        background-color:#4095c6;
+        text-decoration: none;
+    }
+}
+@media(min-width:1280px){
+    a.button{
+        padding:2%;
+        @include button();
+        height: 4vw;
+        width:15vw;
+        margin:2vw 0.3em 0.3em 25%;
+    }   
+}
+@media (min-width:992px) and (max-width:1279px){
+    a.button{
+        padding:2%;
+        @include button();
+        height: 4vw;
+        width:15vw;
+        margin:2vw 0.3em 0.3em 25%;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+    a.button{
+        padding:2%;
+        @include button();
+        height: 6vw;
+        width:25vw;
+        margin:2vw 0.3em 0.3em 25%;
+    }
+}
+@media (max-width:767px){
+    a.button{
+        padding:8%;
+        @include button();
+        height: 20vw;
+        width:100%;
+        font-size:5vw;        
+        margin:0;
+    }
+}
+.buttons{
+    @include position;
+}
+.buttons__container{
+    @include section;
+}

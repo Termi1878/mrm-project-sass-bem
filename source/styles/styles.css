@@ -1,4 +1,36 @@
 @charset "UTF-8";
+@media all and (max-width: 30em) {
+   a.button3 {
+    display: block;
+    margin: 0.2em auto;
+  }
+}
+
+.button--color {
+  background-color: #3788C5;
+}
+
+@media (min-width: 1280px) {
+  a.button {
+    padding: 2%;
+    display: inline-block;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.2s;
+    height: 4vw;
+    width: 15vw;
+    margin: 2vw 0.3em 0.3em 25%;
+  }
+  a.button:hover {
+    background-color: #4095c6;
+    text-decoration: none;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,19 +58,11 @@ h1 {
   z-index: 1000;
 }
 
-@media all and (max-width: 30em) {
-   a.button3 {
-    display: block;
-    margin: 0.2em auto;
-  }
-}
-
-.button--color {
-  background-color: #3788C5;
+.navbar__item {
+  padding-left: 2vw;
 }
 
 .header {
-  margin-top: 5vw;
   text-align: center;
 }
 
@@ -154,10 +178,7 @@ h1 {
     -webkit-box-align: start;
     align-items: flex-start;
   }
-  .navbar__list__item {
-    padding-left: 2vw;
-  }
-  .background__image__computer {
+  .background__image--computer {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -283,24 +304,6 @@ h1 {
   a.navbar__list__link:hover {
     text-decoration: none;
   }
-  a.button {
-    padding: 2%;
-    display: inline-block;
-    border-radius: 2em;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-weight: 600;
-    color: #FFFFFF;
-    text-align: center;
-    transition: all 0.2s;
-    height: 4vw;
-    width: 15vw;
-    margin: 2vw 0.3em 0.3em 25%;
-  }
-  a.button:hover {
-    background-color: #4095c6;
-    text-decoration: none;
-  }
   .row-columns {
     padding-bottom: 3rem;
     margin-left: 15%;
@@ -333,9 +336,6 @@ h1 {
     background-size: cover;
     -webkit-box-align: start;
     align-items: flex-start;
-  }
-  .navbar__list__item {
-    padding-left: 2vw;
   }
   .background__image__computer {
     width: 100%;
@@ -508,9 +508,6 @@ h1 {
     background-size: cover;
     -webkit-box-align: start;
     align-items: flex-start;
-  }
-  .navbar__list__item {
-    padding-left: 2vw;
   }
   .background__image__computer {
     width: 100%;
@@ -691,9 +688,6 @@ h1 {
     background-size: cover;
     -webkit-box-align: start;
     align-items: flex-start;
-  }
-  .navbar__list__item {
-    padding-left: 2vw;
   }
   .background__image__computer {
     width: 100%;

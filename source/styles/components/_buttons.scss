@@ -70,3 +70,7 @@ a.button--blue{
 .buttons__container{
     @include section;
 }
+.buttons__position{
+    margin-top:3vw;
+    margin-left:2vw;
+}

@@ -1,88 +1,95 @@
-.fonts{
-    @include position;
+$padding:5vw;
+$margin-top:2.5vw;
+.project--content{
+    @include float-align();
+    padding-left:$padding;
+    padding-right: $padding;
+    p{
+        padding-left:$padding*2;
+        padding-right:$padding*2;
     }
-    .fonts__container{
-        @include section;
-    }
-    .fonts__container--smaller{
-        margin-top:2vw;
-    }
-    
-    .fonts__style--inline{
-        display: inline;
-    }
-    .fonts__section
-    {
-        padding-bottom:1vw;
-    }
-body{
-    font-family: 'Montserrat', sans-serif !important;
 }
 @media(min-width:1280px){
+    .navbar__list--size{
+        font-size: 1.1vw;
+    }
     .columns__paragraph--font{
         font-size:1vw;
-        color:#7f7f7f;
     }
     .project__header--style{
         font-size:2.5vw;
-        color:black;
-        padding-left:5vw;
-        font-weight:500;
     }
     .columns__title--font{
         font-size:1vw;
-        font-weight:500;
-        text-align: center;
+    }
+    .technology__paragraph--bigger{
+        @include tech-paragraph();
+        font-size:1vw;
+    }
+    .project--content{
+        p{
+            font-size:1vw;
+            margin-bottom:5vw;
+        }
     }
 }
 @media (min-width:992px) and (max-width:1279px){
+    .navbar__list--size{
+        font-size: 1.4vw;
+    }
     .columns__paragraph--font{
         font-size:1.2vw;
-        color:#7f7f7f;
     }
     .project__header--style{
         font-size:2.5vw;
-        color:black;
-        padding-left:5vw;
-        font-weight:500;
     }
     .columns__title--font{
         font-size:1.5vw;
-        font-weight:500;
-        text-align: center;
+    }
+    .project--content{
+        p{
+            font-size: 1.5vw;
+            margin-bottom:5vw;
+        }
     }
 }
 @media (min-width:768px) and (max-width:991px){
+    .navbar__list--size{
+        font-size: 2vw;
+    }
     .columns__paragraph--font{
         font-size:1.4vw;
-        color:#7f7f7f;
     }
     .project__header--style{
         font-size:3vw;
-        font-weight:500;
-        color:black;
-        padding-left:5vw;
     }
     .columns__title--font{
-        font-size:1.5vw;
-        font-weight:500;
-        text-align: center;
+        font-size:2vw;
+    }
+    .project--content{
+        p{
+            font-size: 1.5vw;
+            margin-bottom:5vw;
+        }
     }
 }
 @media (max-width:767px){
+    .navbar__list--size{
+        font-size: 2vw;
+    }
     .columns__paragraph--font{
         font-size:3.5vw;
-        color:#7f7f7f;
     }
     .project__header--style{
         color:black;
-        font-size:5vw;
-        font-weight:500;
-    }
-    
+    } 
     .columns__title--font{
         font-size:5vw;
-        font-weight:500;
-        text-align: center;
+    }
+    .project--content{
+        p{
+            font-size: 5w;
+            margin-bottom:5vw;
+        }
     }
 }

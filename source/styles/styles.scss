@@ -43,7 +43,7 @@ $margin-top:2.5vw;
 .colors{
     @include position;
 }
-.colors__container{
+.section__border{
     @include section;
 }
 .colors__section{
@@ -53,9 +53,6 @@ $margin-top:2.5vw;
 }
 .fonts{
     @include position;
-}
-.fonts__container{
-    @include section;
 }
 .fonts__style--inline{
     display: inline;
@@ -89,6 +86,11 @@ $margin-top:2.5vw;
 }
 .colors__title{
     font-size:2vw;
+}
+.grids__section{
+    float:left;
+    margin-left: 2vw;
+    margin-top: 5vw;
 }
 //13.12.2018 added here:
 @include background-photo();
@@ -130,9 +132,9 @@ $margin-top:2.5vw;
     @include width-height();
     object-fit:cover;
 }
-//end
-// to add:
-// grid, center columns in main page
+.grids{
+    @include position;
+}
 //koniec styleguide
 @media(min-width:1280px){
     .navbar__logo{

@@ -1,152 +1,24 @@
-{% extends 'base/Layoutstyle.twig' %}
-
+{% extends 'base/Layout.twig' %}
+//
 {% block content %}
-<section class="colors">
-    <div class="colors__container section__border">
-        <h2 class="colors__content--header">
-        Color Palette
-        </h2>
-    </div>
-    <div class="colors__section">
-        <div class="colors__presentation colors__presentation--posts">
+    <section class="background__image">
+            <img class="background__image--computer" src="assets/images/komputer.jpg" alt>
+    </section>
+    <section class="posts">
+        <div class="container-fluid posts__container">
+            <div class="posts__content">
+                <h2 class="posts__header posts__header--size" style="text-align: center;font-size: 1.8;font-weight:600;">
+                    POSTY
+                </h2>
+                <p class="posts__paragraph">
+                    Znajdziesz tu najnowsze wpisy na temat działalności, aktywności,
+                    pomysłów Młodzieżowych Rad z całej Polski. Poniżej kliknij w interesującą Cię dziedzinę
+                    opatrzoną odpowiednim hashtagiem.
+                </p>
+            </div>
         </div>
-        <h3 class="colors__title">
-        Posts
-        <br>
-        Background
-        </h3>
-        <p class="colors__paragraph colors__paragraph--hex">
-        HEX:
-        </p>
-        <p class="colors__paragraph colors__paragraph--number">
-        #FAFAFA
-        </p>
-    </div>
-    <div class="colors__section">
-        <div class="colors__presentation colors__presentation--footer">
-        </div>
-        <h3 class="colors__title">
-        Footer
-        <br>
-        buttons
-        </h3>
-        <p class="colors__paragraph colors__paragraph--hex">
-        HEX:
-        </p>
-        <p class="colors__paragraph colors__paragraph--number">
-        #3788C5
-        </p>
-    </div>
-    <div class="colors__section">
-        <div class="colors__presentation colors__presentation--hover">
-        </div>
-        <h3 class="colors__title">
-        Button
-        <br>
-        Hover
-        </h3>
-        <p class="colors__paragraph colors__paragraph--hex">
-        HEX:
-        </p>
-        <p class="colors__paragraph colors__paragraph--number">
-        #4095C6
-        </p>
-    </div>
-    <div class="colors__section">
-        <div class="colors__presentation colors__presentation--tech">
-        </div>
-        <h3 class="colors__title">
-        Technology
-        <br>
-        paragraphs
-        </h3>
-        <p class="colors__paragraph colors__paragraph--hex">
-        HEX:
-        </p>
-        <p class="colors__paragraph colors__paragraph--number">
-        #7F7F7F
-        </p>
-    </div>
-</section>
-<section class="fonts">
-    <div class="fonts__container section__border">
-        <h2 class="fonts__container--header">
-        Fonts - Montserrat
-        </h2>
-    </div>
-    <div class="fonts__section fonts__section--montserrat">
-        <h1 class="posts__header fonts__style--inline">
-        Posts header
-        </h1>
-        <h3 class="fonts__smaller fonts__paragraph--element fonts__style--inline">
-        H1
-        </h3>
-        <h3 class="fonts__smaller fonts__paragraph--weight fonts__style--inline">
-        Font-weight:600
-        </h3>
-    </div>
-    <div class="fonts__section fonts__section--montserrat">
-        <h2 class="project__header fonts__style--inline">
-        Project header
-        </h2>
-        <h3 class="fonts__smaller fonts__paragraph--element fonts__style--inline">
-        H2
-        </h3>
-        <h3 class="fonts__smaller fonts__paragraph--weight fonts__style--inline">
-         Font-weight:500
-        </h3>
-    </div>
-        <h3 class="columns__title fonts__style--inline">
-        Columns title
-        </h3>
-        <h3 class="fonts__smaller fonts__paragraph--element fonts__style--inline">
-        H3
-        </h3>
-        <h3 class="fonts__smaller fonts__paragraph--weight fonts__style--inline">
-        Font-weight:500
-        </h3>
-</section>
-<section class="buttons">
-    <div class="buttons__container section__border">
-        <h2 class="buttons__container--header">
-            Buttons
-        </h2>
-    </div>
-    <h3 class="buttons__container--category">
-    Usage
-    </h3>
-    <a href="#" class="button button--blue button--margin">
-    Desktop
-    </a>
-    <a href="#" class="button button--hover button--margin">
-    Desktop Hover
-    </a>
-    <a href="#" class="button button--disabled button--margin">
-    Disabled
-    </a>
-     <h3 class="buttons__container--category">
-    Sizes
-    </h3>
-    <a href="#" class="button button--blue button--margin">
-    Normal
-    </a>
-     <h3 class="buttons__container--category">
-    Links
-    </h3>
-    <a href="#" class="link link--normal">
-    Link
-    </a>
-</section>
-<section class="grids">
-    <div class="grids__container section__border">
-        <h2 class="grids__container--header">
-            Grid
-        </h2>
-    </div>
-    <h1 class="grids__container--category">
-    Columns grid:
-    </h1>
-       <section class="columns">
+    </section>
+    <section class="columns columns--background">
         <div class="container columns__container">
             <div class="columns__row">
                 <div class="col-xl-4 col-md-6 row__column">
@@ -220,13 +92,17 @@
             </div>
         </div>
     </section>
-    <h1 class="grids__container--category">
-        Section grid:
-    </h1>
-</section>
-
+    <div class="project--content">
+        <h2 class="project__header project__header--style" style="text-align: center;font-size: 1.8;font-weight:600;"> 
+            Dodatkowe informacje
+        </h2>
+        <p class="tech-paragraph project__paragraph">
+            Dowiedz się więcej na temat Młodzieżowych Rad w Internecie,
+            przeczytaj jaka przyświeca nam misja oraz co chcemy osiągnąć, później skontaktuj się z nami.
+        </p>
+    </div>
     <section class="technology">    
-        <div class="container technology__container">
+        <div class="container technology__container technology__column--first">
             <div class="row technology__row">
                 <div class="col-lg-6 technology__content">
                     <h2 class="project__header project__header--style technology__header"> 
@@ -250,5 +126,29 @@
             </div>
         </div>
     </section>
-
+    <section class="technology__reverse" style="background:#fff">
+        <div class="container technology__container">
+            <div class="row row-reverse technology technology__row-reverse">
+                <div class="col-lg-6 technology__content">
+                    <h2 class="project__header project__header--style  technology__header">
+                        Rozpocznijmy wspólną
+                    </h2>
+                    <div class="technology__paragraph">
+                        <p class="technology__paragraph--bigger">
+                            Nawiąż z nami kontakt i zacznijmy
+                            rozmawiać. Dzięki temu lepiej się poznamy i będziemy mogli wspólnie
+                            tworzyć nowe inicjatywy oraz rozwinąć siatkę kontaktów wśród młodych i
+                            aktywnych społecznie ludzi.
+                        </p>
+                    </div>
+                    <a href="#" class="button button--blue">
+                        Kontakt
+                    </a>
+                </div>
+                <div class="col-lg-6 technology__photo">
+                    <img class="technology__image" src="assets/images/sitting.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}

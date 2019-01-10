@@ -81,7 +81,9 @@
     @include section;
 }
 .fonts{
-    @include position;
+    &--position{
+        @include position;
+    }
     &__style--inline{
         display: inline;
     }
@@ -160,7 +162,9 @@
         margin-top:2vw;
     }
     .columns{
-        height: 55vw;
+        &--size{
+            height: 55vw;
+        }
         &__photo{
             width:7.5vw;
         }
@@ -258,7 +262,6 @@
             margin-top:2.5vw;
             margin-left:2.5vw;
         }
-
     }
     .technology{
         &__column--first{

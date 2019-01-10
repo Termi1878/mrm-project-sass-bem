@@ -1,12 +1,12 @@
 {% extends 'base/Layout.twig' %}
 //
 {% block content %}
-    <section class="background__image">
+    <section class="background__image background__image--style">
             <img class="background__image--computer" src="assets/images/komputer.jpg" alt>
     </section>
     <section class="posts">
         <div class="container-fluid posts__container">
-            <div class="posts__content">
+            <div class="posts__content posts__content--position">
                 <h2 class="posts__header posts__header--size" style="text-align: center;font-size: 1.8;font-weight:600;">
                     POSTY
                 </h2>
@@ -18,10 +18,10 @@
             </div>
         </div>
     </section>
-    <section class="columns columns--background">
+    <section class="columns columns--size columns--background">
         <div class="container columns__container">
             <div class="columns__row">
-                <div class="col-xl-4 col-md-6 row__column">
+                <div class="col-xl-4 col-md-6 row__column row__column--position">
                     <div class="columns__section">
                         <img class="columns__photo" src="#" alt>
                         <h3 class="columns__title columns__title--font">
@@ -32,7 +32,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-6 column--phones row__column row__column--phones">
+                <div class="col-xl-4 col-md-6 column--phones row__column row__column--position row__column--phones">
                     <div class="columns__section">
                         <img class="columns__photo" src="#" alt>
                         <h3 class=" columns__title columns__title--font">
@@ -43,7 +43,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-6 column-tablets column--phones row__column row__column--phones row__column--tablets">
+                <div class="col-xl-4 col-md-6 column-tablets column--phones row__column row__column--position row__column--phones row__column--tablets">
                     <div class="columns__section">
                         <img class=" columns__photo" src="#" alt>
                         <h3 class="columns__title columns__title--font">
@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="columns__row">
-                <div class="col-xl-4 col-md-6 row__column--third row__column row__column--phones row__column--tablets">
+                <div class="col-xl-4 col-md-6 row__column--third row__column row__column--position row__column--phones row__column--tablets">
                     <div class="columns__section">
                         <img class="columns__photo" src="#" alt>
                         <h3 class="columns__title columns__title--font">
@@ -67,7 +67,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-6 row__column row__column--third row__column--phones row__column--tablets">
+                <div class="col-xl-4 col-md-6 row__column row__column--position row__column--third row__column--phones row__column--tablets">
                     <div class="columns__section">
                         <img class="columns__photo" src="#" alt>
                         <h3 class=" columns__title columns__title--font">
@@ -78,7 +78,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-6 row__column row__column--third row__column--phones row__column--tablets">
+                <div class="col-xl-4 col-md-6 row__column row__column--position row__column--third row__column--phones row__column--tablets">
                     <div class="columns__section">
                         <img class="columns__photo" src="#" alt>
                         <h3 class="columns__title columns__title--font">
@@ -92,11 +92,11 @@
             </div>
         </div>
     </section>
-    <div class="project--content">
+    <div class="project__content project__content--font project__content--position">
         <h2 class="project__header project__header--style" style="text-align: center;font-size: 1.8;font-weight:600;"> 
             Dodatkowe informacje
         </h2>
-        <p class="tech-paragraph project__paragraph">
+        <p class="project__paragraph project__paragraph--position">
             Dowiedz się więcej na temat Młodzieżowych Rad w Internecie,
             przeczytaj jaka przyświeca nam misja oraz co chcemy osiągnąć, później skontaktuj się z nami.
         </p>
@@ -108,7 +108,7 @@
                     <h2 class="project__header project__header--style technology__header"> 
                         Kilka słów o naszym projekcie
                     </h2>
-                    <div class=" technology__paragraph">
+                    <div class="technology__paragraph technology__paragraph--position">
                         <p class="technology__paragraph--bigger">
                             Przeczytaj i dowiedz się, jakie są
                             nasze główne postulaty, co jest dla nas istotne oraz czego chcemy razem
@@ -120,7 +120,7 @@
                         O projekcie
                     </a>
                 </div>
-                <div class="col-lg-6 technology__photo">
+                <div class="col-lg-6 technology__photo technology__photo--size">
                     <img class="technology__image" src="assets/images/calendar.jpg">
                 </div>
             </div>
@@ -133,7 +133,7 @@
                     <h2 class="project__header project__header--style  technology__header">
                         Rozpocznijmy wspólną
                     </h2>
-                    <div class="technology__paragraph">
+                    <div class="technology__paragraph technology__paragraph--position">
                         <p class="technology__paragraph--bigger">
                             Nawiąż z nami kontakt i zacznijmy
                             rozmawiać. Dzięki temu lepiej się poznamy i będziemy mogli wspólnie
@@ -145,7 +145,7 @@
                         Kontakt
                     </a>
                 </div>
-                <div class="col-lg-6 technology__photo">
+                <div class="col-lg-6 technology__photo technology__photo--size">
                     <img class="technology__image" src="assets/images/sitting.jpg">
                 </div>
             </div>

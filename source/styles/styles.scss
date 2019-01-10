@@ -2,30 +2,40 @@
 @import 'components/_buttons.scss';
 @import 'base/_fonts.scss';
 @import 'base/_typography.scss';
+@import 'utils/variables.scss';
+@include background-footer();
+@include a-link();
+@include background();
 *{
     margin:0;
     padding:0;
 }
 .container{
     max-width:100% !important;
-}
-.container-fluid{
-    padding-left: 10vw !important;
-    padding-right: 10vw !important;
+    &-fluid{
+        padding-left: 10vw !important;
+        padding-right: 10vw !important;
+    }
 }
 .navbar{
-    width:100%;
-    z-index:1000;
+    &--size{
+        width:100%;
+        z-index:1000;
+    }
+    &__item{
+        padding-left: 2vw;
+    }
+    &__logo{
+        margin: 0;
+        padding: 0.5vw 0;
+        img{
+            object-fit: cover;
+        }
+    }
+    &__list{
+        @include right-navigator();
+    }
 }
-$padding:5vw;
-$margin-top:2.5vw;
-.navbar__item{
-    padding-left: 2vw;
-}
-@include background-footer();
-@include a-link();
-@include background();
-
 .background__image--computer{
     @include width-height();
     object-fit:cover;
@@ -36,274 +46,283 @@ $margin-top:2.5vw;
     &__paragraph{
         text-align:center;
     }
-}
-.header--position{
-    margin-top:2vw;
+    &--position{
+        margin-top:2vw;
+    }
 }
 .colors{
     @include position;
+    &__section{
+        float:left;
+        margin-left: 2vw;
+        margin-top: 5vw;
+    }
+    &__presentation{
+        width:100px;
+        height:100px;
+        &--posts{
+            background:#fafafa;
+        }
+        &--footer{
+            background:#3788c5;
+        }
+        &--hover{
+            background:#4095c6;
+        }
+        &--tech{
+            background:#7f7f7f;
+        }
+    }
+    &__title{
+        font-size:2vw;
+    }
 }
 .section__border{
     @include section;
 }
-.colors__section{
-    float:left;
-    margin-left: 2vw;
-    margin-top: 5vw;
-}
 .fonts{
     @include position;
-}
-.fonts__style--inline{
-    display: inline;
-}
-.fonts__section{
-    padding-bottom:1vw;
-}
-.fonts__section--position{
-    padding-bottom:1vw;
-    margin-top:3vw;
-    margin-left:2vw;
-}
-.columns--background{
-    background:#fafafa;
-}
-.colors__presentation{
-    width:100px;
-    height:100px;
-}
-.colors__presentation--posts{
-    background:#fafafa;
-}
-.colors__presentation--footer{
-    background:#3788c5;
-}
-.colors__presentation--hover{
-    background:#4095c6;
-}
-.colors__presentation--tech{
-    background:#7f7f7f;
-}
-.colors__title{
-    font-size:2vw;
-}
-.grids__section{
-    float:left;
-    margin-left: 2vw;
-    margin-top: 5vw;
+    &__style--inline{
+        display: inline;
+    }
+    &__section{
+        padding-bottom:1vw;
+    }
+    &__section--position{
+        padding-bottom:1vw;
+        margin-top:3vw;
+        margin-left:2vw;
+    }
+
 }
 //13.12.2018 added here:
-@include background-photo();
-
 .technology__row-reverse{
     flex-direction: row-reverse;
 }
-.navbar__logo{
-    margin: 0;
-    padding: 0.5vw 0;
-    img{
-        object-fit: cover;
+.technology{
+    &__photo--size{
+        @include background-photo;
     }
 }
-.navbar__list{
-    @include right-navigator();
-}
-.row__column{
+.row__column--position{
     height:20vw;
     margin-left:2.5vw;
     @include column();
+    &--third{
+        margin-top:$margin-top;
+    }
 }
-.row__column--third{
-    margin-top:$margin-top;
+.posts{
+    &__header--style{
+        font-size:3vw !important;
+        text-align: center;
+        font-weight:600;
+    }
+    &__content{
+        float:left;
+        text-align:center;
+    }
 }
-.posts__header--style{
-    font-size:3vw !important;
-    text-align: center;
-    font-weight:600;
-}
-.posts__content{
-    float:left;
-    text-align:center;
-}
-.columns__paragraph{
-    text-align:center;
-}
-.background__image__computer{
-    @include width-height();
-    object-fit:cover;
+.columns{
+    &--background{
+        background:#fafafa;
+    }
+    &paragraph{
+        text-align:center;
+    }
 }
 .grids{
     @include position;
+    &__section{
+        float:left;
+        margin-left: 2vw;
+        margin-top: 5vw;
+    }
 }
 //koniec styleguide
 @media(min-width:1280px){
-    .navbar__logo{
+    .navbar__logo--size{
         img{
             height:10vw;
             width:39vw;
         }
     }
-    .posts__content{
+    .posts__content--position{
         padding-left:$padding;
         padding-right:$padding;
         margin-top:2vw;
     }
-    .row__column{
+    .row__column--position{
         @include column();   
         max-width: 25% !important;
         height:20vw;
         margin-left:2.5vw;
-    }
-    .columns__photo{
-        width:7.5vw;
+        margin-top:2vw;
     }
     .columns{
         height: 55vw;
+        &__photo{
+            width:7.5vw;
+        }
+        &__row{
+            padding-bottom: 3rem;
+            margin-left:15%;
+        }
+        &__section{
+            padding: 10vw 2vw 0vw 2vw;
+        }
     }
-    .columns__row{
-        padding-bottom: 3rem;
-        margin-left:15%;
-    }
-    .columns__section{
-        padding: 10vw 2vw 0vw 2vw;
-    } 
     .technology__column--first{
         margin-top:18vw;
     }
-    .row-columns{
-        padding-bottom: 3rem;
-        margin-left: 15%;
-    }
 }
 @media (min-width:992px) and (max-width:1279px){
-    .navbar__logo{
+    .navbar__logo--size{
         img{
             height:10vw;
             width:30vw;
         }
     }
-    .posts__content{
+    .posts__content--position{
         padding-left:$padding;
         padding-right:$padding;
         margin-top:2vw;
     }
-    .row__column{
+    .row__column--position{
         max-width:30% !important;
-    }
-    .columns__photo{
-        width:7.5vw;
-    }
-    .columns__title{
-        margin-bottom:1rem;
+        margin-top:2vw;
     }
     .columns{
-         height: 60vw;
+        &--size{
+            height: 60vw;
+        }
+        &__photo{
+            width:7.5vw;
+        }
+        &__title{
+            margin-bottom:1rem;
+        }
+        &__row{
+            padding-bottom: 3rem;
+        }
+        &__section{
+            padding: 7vw 2vw 0vw 2vw;
+        }
     }
-    .columns__row{
-        padding-bottom: 3rem;
-    }
-    .columns__section{
-        padding: 7vw 2vw 0vw 2vw;
-    } 
-    .technology__column--first{
-        margin-top:18vw !important;
-    }
-    .technology__content{
-        .technology__paragraph{
+    .technology{
+        &__column--first{
+            margin-top:18vw !important;
+        }
+        &__paragraph--position{
             padding-left:$padding;
             padding-right:$padding*2.4;
         }
     }
 }
 @media (min-width:768px) and (max-width:991px){
-    .navbar__logo{
+    .navbar__logo--size{
         img{
             height:10vw;
             width:30vw;
         }
     }
-    .posts__content{
+    .posts__content--position{
         padding-left:$padding;
         padding-right:$padding;
         margin-top:2vw;
     }
-    .row__column{
-        max-width:40% !important;
-        height:30vw;
-    }
-    .columns__photo{
-        width:7.5vw;
-    }
-    .columns__title{
-        margin-bottom:1rem;
-    }
-    .row__column--tablets{
-        margin-top:2.5vw;
-        margin-left:2.5vw;
-    }
     .columns{
-        height: 115vw;
+        &--size{
+            height: 115vw;
+        }
+        &__photo{
+            width:7.5vw;
+        }
+        &__title{
+            margin-bottom:1rem;
+        }
+        &__row{
+            padding-bottom: 3rem;
+            margin-left:10vw;
+        }
+        &__section{
+            padding: 15vw 2vw 0vw 2vw;
+        } 
     }
-    .columns__row{
-        padding-bottom: 3rem;
-        margin-left:10vw;
+    .row__column{
+        &--position{
+            max-width:40% !important;
+            height:30vw;
+        }
+        &--tablets{
+            margin-top:2.5vw;
+            margin-left:2.5vw;
+        }
+
     }
-    .columns__section{
-        padding: 15vw 2vw 0vw 2vw;
-    } 
-    .technology__column--first{
-        margin-top:18vw !important;
-    }
-    .technology__content{
-        padding-bottom:3rem;
-        padding-top:3rem;
-        .technology__paragraph{
+    .technology{
+        &__column--first{
+            margin-top:18vw !important;
+        }
+        &__content{
+            padding-bottom:3rem;
+            padding-top:3rem;
+        }
+        &__paragraph--position{
             padding-left:$padding;
             padding-right:$padding*2.4;
         }
     }
 }
 @media (max-width:767px){
-    .navbar__logo{
+    .navbar__logo--size{
         img{
             height:15vw;
             width:50vw;
         }
     }
-    .row__column{  
-        height:70vw;
-        margin-left:0 !important;
-    }
-    .posts__content{
-        margin-top:2vw;
-    }
-    .columns__photo{
-        width:7.5vw;
-    }
-    .row__column--third{
-        margin-top:$margin-top;
-    }
-    .row__column--phones{
-        margin-top:2vw;
+    .row__column{
+        &--position{  
+            height:70vw;
+            margin-left:0 !important;
+        }
+        &--third{
+            margin-top:$margin-top;
+        }
+        &--phones{
+            margin-top:2vw;
+        }
+
     }
     .columns{
-        height: 470vw;
+        &--size{
+            height: 470vw;
+        }
+        &__row{
+            padding-bottom: 3rem;
+        }
+        &__section{
+            padding: 30vw 2vw 2vw 2vw;
+        }
+        &__photo{
+            width:7.5vw;
+        }
+
     }
-    .columns__row{
-        padding-bottom: 3rem;
+    .posts__content--position{
+        margin-top:2vw;
     }
-    .columns__section{
-        padding: 30vw 2vw 2vw 2vw;
-    } 
-    .technology__column--first{
-        margin-top:31vw !important;
-    }
-    .technology__content{
-        padding-bottom:3rem;
-        padding-top:3rem;
-        .technology__paragraph{
+    .technology{
+        &__column--first{
+            margin-top:31vw !important;
+        }
+        &__content{
+            padding-bottom:3rem;
+            padding-top:3rem;
+        }
+        &__paragraph--position{
             padding-left:$padding;
             padding-right:$padding*2.4;
         }
-    }
+}
 }

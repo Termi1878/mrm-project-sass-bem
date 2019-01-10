@@ -1,6 +1,5 @@
-$padding:5vw;
-$margin-top:2.5vw;
-.project--content{
+@import '../utils/variables.scss';
+.project__content--position{
     @include float-align();
     padding-left:$padding;
     padding-right: $padding;
@@ -13,43 +12,51 @@ $margin-top:2.5vw;
     .navbar__list--size{
         font-size: 1.1vw;
     }
-    .columns__paragraph--font{
-        font-size:1vw;
-    }
-    .project__header--style{
-        font-size:2.5vw;
-    }
-    .columns__title--font{
-        font-size:1vw;
+    .columns{
+        &__paragraph--font{
+            font-size:1vw;
+        }
+        &__title--font{
+            font-size:1vw;
+        }
     }
     .technology__paragraph--bigger{
         @include tech-paragraph();
         font-size:1vw;
     }
-    .project--content{
-        p{
-            font-size:1vw;
-            margin-bottom:5vw;
+    .project{
+        &__header--style{
+            font-size:2.5vw;
         }
+        &__content--font{
+            p{
+                font-size: 1w;
+                margin-bottom:5vw;
+            }
+        } 
     }
 }
 @media (min-width:992px) and (max-width:1279px){
     .navbar__list--size{
         font-size: 1.4vw;
     }
-    .columns__paragraph--font{
-        font-size:1.2vw;
+    .project{
+        &__header--style{
+            font-size:2.5vw;
+        }
+        &__content--font{
+            p{
+                font-size: 1.5w;
+                margin-bottom:5vw;
+            }
+        } 
     }
-    .project__header--style{
-        font-size:2.5vw;
-    }
-    .columns__title--font{
-        font-size:1.5vw;
-    }
-    .project--content{
-        p{
-            font-size: 1.5vw;
-            margin-bottom:5vw;
+    .columns{
+        &__paragraph--font{
+            font-size:1.2vw;
+        }
+        &__title--font{
+            font-size:1.5vw;
         }
     }
 }
@@ -57,19 +64,23 @@ $margin-top:2.5vw;
     .navbar__list--size{
         font-size: 2vw;
     }
-    .columns__paragraph--font{
-        font-size:1.4vw;
+    .project{
+        &__header--style{
+            font-size:3vw;
+        }
+        &__content--font{
+            p{
+                font-size: 1.5vw;
+                margin-bottom:5vw;
+            }
+        } 
     }
-    .project__header--style{
-        font-size:3vw;
-    }
-    .columns__title--font{
-        font-size:2vw;
-    }
-    .project--content{
-        p{
-            font-size: 1.5vw;
-            margin-bottom:5vw;
+    .columns{
+        &__paragraph--font{
+            font-size:1.4vw;
+        }
+        &__title--font{
+            font-size:2vw;
         }
     }
 }
@@ -77,19 +88,23 @@ $margin-top:2.5vw;
     .navbar__list--size{
         font-size: 2vw;
     }
-    .columns__paragraph--font{
-        font-size:3.5vw;
+    .project{
+        &__header--style{
+            color:black;
+        }
+        &__content--font{
+            p{
+                font-size: 5w;
+                margin-bottom:5vw;
+            }
+        } 
     }
-    .project__header--style{
-        color:black;
-    } 
-    .columns__title--font{
-        font-size:5vw;
-    }
-    .project--content{
-        p{
-            font-size: 5w;
-            margin-bottom:5vw;
+    .columns{
+        &__paragraph--font{
+            font-size:3.5vw;
+        }
+        &__title--font{
+            font-size:5vw;
         }
     }
 }

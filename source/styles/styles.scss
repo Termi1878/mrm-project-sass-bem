@@ -16,6 +16,10 @@
         padding-left: 10vw !important;
         padding-right: 10vw !important;
     }
+    &__posts{
+        float:left;
+        text-align:center;
+    }
 }
 .navbar{
     &--size{
@@ -73,9 +77,6 @@
             background:#7f7f7f;
         }
     }
-    &__title{
-        font-size:2vw;
-    }
 }
 .section__border{
     @include section;
@@ -98,12 +99,12 @@
 
 }
 //13.12.2018 added here:
-.technology__row-reverse{
-    flex-direction: row-reverse;
-}
 .technology{
     &__photo--size{
         @include background-photo;
+    }
+    &__row-reverse{
+        flex-direction: row-reverse;
     }
 }
 .row__column--position{
@@ -119,10 +120,6 @@
         font-size:3vw !important;
         text-align: center;
         font-weight:600;
-    }
-    &__content{
-        float:left;
-        text-align:center;
     }
 }
 .columns{
@@ -149,10 +146,12 @@
             width:39vw;
         }
     }
-    .posts__content--position{
+    .container{
+        &__posts{
         padding-left:$padding;
         padding-right:$padding;
         margin-top:2vw;
+        }
     }
     .row__column--position{
         @include column();   
@@ -176,9 +175,14 @@
             padding: 10vw 2vw 0vw 2vw;
         }
     }
-    .technology__column--first{
-        margin-top:18vw;
-    }
+    .technology{
+        &__content{
+            padding-top:5vw !important;
+        }
+        &__row{
+            margin-top:18vw;
+        }
+}
 }
 @media (min-width:992px) and (max-width:1279px){
     .navbar__logo--size{
@@ -187,10 +191,12 @@
             width:30vw;
         }
     }
-    .posts__content--position{
+    .container{
+        &__posts{
         padding-left:$padding;
         padding-right:$padding;
         margin-top:2vw;
+        }
     }
     .row__column--position{
         max-width:30% !important;
@@ -230,10 +236,12 @@
             width:30vw;
         }
     }
-    .posts__content--position{
+    .container{
+        &__posts{
         padding-left:$padding;
         padding-right:$padding;
         margin-top:2vw;
+        }
     }
     .columns{
         &--size{
@@ -264,9 +272,9 @@
         }
     }
     .technology{
-        &__column--first{
-            margin-top:18vw !important;
-        }
+       &__column--first{
+           margin-top:18vw !important;
+       }
         &__content{
             padding-bottom:3rem;
             padding-top:3rem;
@@ -312,12 +320,14 @@
         }
 
     }
-    .posts__content--position{
+    .container{
+        &__posts{
         margin-top:2vw;
+        }
     }
     .technology{
         &__column--first{
-            margin-top:31vw !important;
+            margin-top:120vw !important;
         }
         &__content{
             padding-bottom:3rem;

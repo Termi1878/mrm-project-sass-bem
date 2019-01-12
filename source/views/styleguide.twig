@@ -118,9 +118,6 @@
     <a href="#" class="button button--blue button--margin">
     Desktop
     </a>
-    <a href="#" class="button button--hover button--margin">
-    Desktop Hover
-    </a>
     <a href="#" class="button button--disabled button--margin">
     Disabled
     </a>
@@ -146,16 +143,16 @@
     <h1 class="grids__container--category">
     Columns grid:
     </h1>
-       <section class="columns columns--size">
+    <section class="columns columns--size columns--background">
         <div class="container columns__container">
             <div class="columns__row">
                 <div class="col-xl-4 col-md-6 row__column row__column--position">
                     <div class="columns__section">
                         <img class="columns__photo" src="#" alt>
-                        <h3 class="columns__title columns__title--font">
+                        <h3 class="title title__columns">
                             #ŻycieSpołeczne
                         </h3>
-                        <p class="columns__paragraph columns__paragraph--font">
+                        <p class="paragraph paragraph__columns">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut dui.
                         </p>
                     </div>
@@ -163,10 +160,10 @@
                 <div class="col-xl-4 col-md-6 column--phones row__column row__column--position row__column--phones">
                     <div class="columns__section">
                         <img class="columns__photo" src="#" alt>
-                        <h3 class=" columns__title columns__title--font">
+                        <h3 class="title title__columns">
                             #Rozmowa
                         </h3>
-                        <p class="columns__paragraph columns__paragraph--font">
+                        <p class="paragraph paragraph__columns">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut dui.
                         </p>
                     </div>
@@ -174,10 +171,10 @@
                 <div class="col-xl-4 col-md-6 column-tablets column--phones row__column row__column--position row__column--phones row__column--tablets">
                     <div class="columns__section">
                         <img class=" columns__photo" src="#" alt>
-                        <h3 class="columns__title columns__title--font">
+                        <h3 class="title title__columns">
                             #InteresMłodzieży 
                         </h3>
-                        <p class="columns__paragraph columns__paragraph--font">
+                        <p class="paragraph paragraph__columns">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut dui.
                         </p>
                     </div>
@@ -187,10 +184,10 @@
                 <div class="col-xl-4 col-md-6 row__column--third row__column row__column--position row__column--phones row__column--tablets">
                     <div class="columns__section">
                         <img class="columns__photo" src="#" alt>
-                        <h3 class="columns__title columns__title--font">
+                        <h3 class="title title__columns">
                             #Informacja
                         </h3>
-                        <p class="columns__paragraph columns__paragraph--font">
+                        <p class="paragraph paragraph__columns">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut dui.
                         </p>
                     </div>
@@ -198,10 +195,10 @@
                 <div class="col-xl-4 col-md-6 row__column row__column--position row__column--third row__column--phones row__column--tablets">
                     <div class="columns__section">
                         <img class="columns__photo" src="#" alt>
-                        <h3 class=" columns__title columns__title--font">
+                        <h3 class="title title__columns">
                             #Komunikacja 
                         </h3>
-                        <p class="columns__paragraph columns__paragraph--font">
+                        <p class="paragraph paragraph__columns">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut dui.
                         </p>
                     </div>
@@ -209,10 +206,10 @@
                 <div class="col-xl-4 col-md-6 row__column row__column--position row__column--third row__column--phones row__column--tablets">
                     <div class="columns__section">
                         <img class="columns__photo" src="#" alt>
-                        <h3 class="columns__title columns__title--font">
+                        <h3 class="title title__columns">
                             #Działanie 
                         </h3>
-                        <p class="columns__paragraph columns__paragraph--font">
+                        <p class="paragraph paragraph__columns">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut dui.
                         </p>
                     </div>
@@ -220,20 +217,28 @@
             </div>
         </div>
     </section>
-    <h1 class="grids__container--category">
-        Section grid:
-    </h1>
-</section>
-
-    <section class="technology">    
-        <div class="container technology__container">
+    <section class="technology"> 
+        <div class="project__content project__content--font">
+        <h2 class="project__header title__technology"> 
+            Dodatkowe informacje
+        </h2>
+        <div class="project__text">
+            <p class="paragraph paragraph__project">
+                Dowiedz się więcej na temat Młodzieżowych Rad w Internecie,
+                przeczytaj jaka przyświeca nam misja oraz co chcemy osiągnąć, później skontaktuj się z nami.
+            </p>
+        </div>
+       </div>
+        <div class="container technology__container technology__column--first">
             <div class="row technology__row">
                 <div class="col-lg-6 technology__content">
-                    <h2 class="project__header project__header--style technology__header"> 
+                <div class="project__text">
+                    <h2 class="project__header technology__header title title__technology"> 
                         Kilka słów o naszym projekcie
                     </h2>
-                    <div class="technology__paragraph technology__paragraph--position">
-                        <p class="technology__paragraph--bigger">
+                </div>
+                    <div class="section section__technology">
+                        <p class="paragraph paragraph__technology">
                             Przeczytaj i dowiedz się, jakie są
                             nasze główne postulaty, co jest dla nas istotne oraz czego chcemy razem
                             z Tobą dokonać. Zasięgnij informacji, czym są Młodzieżowe Rady Miast w
@@ -250,5 +255,4 @@
             </div>
         </div>
     </section>
-
 {% endblock %}

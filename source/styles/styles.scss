@@ -3,6 +3,7 @@
 @import 'base/_fonts.scss';
 @import 'base/_typography.scss';
 @import 'utils/variables.scss';
+@import 'base/_base.scss';
 @include background-footer();
 @include a-link();
 @include background();
@@ -77,10 +78,10 @@
         &--tech{
             background:#7f7f7f;
         }
+        &__paragraph{
+            display:inline;
+        }
     }
-}
-.section__border{
-    @include section;
 }
 .fonts{
     &--position{
@@ -136,7 +137,24 @@
         margin-top: 5vw;
     }
 }
-//koniec styleguide
+.section{
+    &__text{
+        padding-left:$padding;
+        padding-right:$padding;
+        margin-bottom:2vw;
+        color:black !important;
+    }
+    &__border{
+        @include section;
+    }
+    &__header{
+        padding-left:$padding;
+        padding-right:$padding;
+        color:black !important;
+        text-align:center;
+        line-height: 2vw;
+    }
+}
 @media(min-width:1280px){
     .navbar__logo--size{
         img{
@@ -180,7 +198,17 @@
         &__row{
             margin-top:10vw;
         }
-}
+    }
+    .section{
+        &__navbar{
+            padding-right: $padding;
+        }
+        &__technology{
+            padding-left:$padding;
+            padding-right:$padding*2.4;
+            color:#7f7f7f;
+        }
+    }
 }
 @media (min-width:992px) and (max-width:1279px){
     .navbar__logo--size{
@@ -224,6 +252,16 @@
         &__paragraph--position{
             padding-left:$padding;
             padding-right:$padding*2.4;
+        }
+    }
+    .section{
+        &__header{
+            text-align:center;
+        }
+        &__text{
+            padding-left:$padding;
+            padding-right:$padding;
+            margin-bottom:2vw;
         }
     }
 }

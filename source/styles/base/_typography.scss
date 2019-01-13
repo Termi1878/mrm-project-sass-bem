@@ -2,15 +2,7 @@
 body{
     font-family: 'Montserrat', sans-serif !important;
 }
-.paragraph{
-    color:#7f7f7f;
-    &__project{
-        color:black !important;
-    }
-    &__columns{
-        text-align: center !important;
-        font-size:1.1vw;
-    }
+.text{
     &__colors{
         display:inline;
         &--hex{
@@ -20,33 +12,32 @@ body{
             font-weight:500;
         }
     }
-    &__technology{
-        font-weight:400;
-    }
+}
+.section__header{
+    padding-left:$padding;
+    padding-right:$padding;
+    color:black !important;
+    text-align:center;
+    line-height: 2vw;
 }
 .title{
     color:black;
     font-weight:500;
     text-align: center;
-    &__columns{
-        color:#7f7f7f;
-        font-size:1.3vw;
-    }
-    &__technology{
-        font-size:2.5vw;
-    } //spytać o kwestię tych samych headerów np.h2 ale inne style i np. columns i technology, drugie do lewej, columns do środka wyrównane i różny rozmiar (paragraph)
-    &__project{
-        padding-left:5vw;
-        font-size:1.8vw;
-        font-weight:600;
-    }
     &__colors{
         font-weight:600;
         font-size:2vw;
     }
-    &__posts{
+    &--h1{
         font-size:3vw !important;
         font-weight:600;
+    }
+    &--h2{
+        font-size:2.5vw;
+    }
+    &--h3{
+        color:#7f7f7f;
+        font-size:1.3vw;
     }
 }
 .project{
@@ -57,6 +48,7 @@ body{
         padding-left:$padding;
         padding-right:$padding;
         margin-bottom:2vw;
+        color:black !important;
     }
 }
 @media(min-width:1280px){
@@ -67,6 +59,7 @@ body{
         &__technology{
             padding-left:$padding;
             padding-right:$padding*2.4;
+            color:#7f7f7f;
         }
     }
     .title{

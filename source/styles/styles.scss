@@ -19,6 +19,7 @@
     &__posts{
         float:left;
         text-align:center;
+        color:black !important;
     }
 }
 .navbar{
@@ -115,19 +116,16 @@
         margin-top:$margin-top;
     }
 }
-.posts{
-    &__header--style{
-        font-size:3vw !important;
-        text-align: center;
-        font-weight:600;
-    }
-}
 .columns{
+    text-align:center;
     &--background{
         background:#fafafa;
     }
-    &paragraph{
+    &__paragraph{
         text-align:center;
+    }
+    &__section{
+        color:#7f7f7f;
     }
 }
 .grids{
@@ -180,7 +178,7 @@
             padding-top:5vw !important;
         }
         &__row{
-            margin-top:18vw;
+            margin-top:10vw;
         }
 }
 }

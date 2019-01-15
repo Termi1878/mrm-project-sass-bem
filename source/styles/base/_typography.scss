@@ -1,4 +1,3 @@
-@import '../utils/variables.scss';
 .text{
     &--major{
         font-weight:600;
@@ -30,6 +29,9 @@
         &--h1{
             font-size:2.5vw;
         }
+    }
+    .text{
+        font-size:1.1vw;
     }
 }
 @media (min-width:992px) and (max-width:1279px){

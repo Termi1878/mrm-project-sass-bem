@@ -10,33 +10,27 @@
     }
 }
 .button{
-    &--margin{
-        margin:0 !important;
-        padding:1.5% !important;
-    }
+    font-weight:600;
+    color:#FFFFFF;
     &--disabled{
         background:#4a545a;
-        color:#FFFFFF;
-        font-weight:600
     }
-    &--blue{
+    &--primary{
         background-color:#3788C5;
-        font-weight:600;
-        color:#FFFFFF;
         &:hover{
             background:#4095c6;
-            color:#FFFFFF;
-            font-weight:600;
         }
     }
 }
 @media (min-width:992px){
     .button{
-        padding:2%;
+        padding:3%;
         @include button();
         height: 4vw;
         width:15vw;
-        margin:2vw 0.3em 0.3em 25%;
+    }
+    .section__button{
+        padding:2vw 0.3em 0.3em 25%;  
     }
 }
 @media (min-width:768px) and (max-width:991px){
@@ -45,7 +39,9 @@
         @include button();
         height: 6vw;
         width:25vw;
-        margin:2vw 0.3em 0.3em 25%;
+    }
+    .section__button{
+        margin:2vw 0.3em 0.3em 25%; 
     }
 }
 @media (max-width:767px){

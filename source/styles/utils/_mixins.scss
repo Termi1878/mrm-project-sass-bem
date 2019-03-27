@@ -12,13 +12,34 @@
     overflow:hidden;
 }
 @mixin background {
-    .background__image--style{
-        position:relative;
-        display:flex;
-        background: url("images/komputer.jpg");
-        background-size: cover;
-        -webkit-box-align: start;
-        align-items: flex-start;
+    .background{
+        &__image--style{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            position:relative;
+            display:flex;
+            background-size: cover;
+            -webkit-box-align: start;
+            align-items: flex-start;
+            display:block;
+        }
+        &__image--main{
+            display: block;
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            background-repeat: no-repeat;
+            background-image: url("http://krystain.exteriordemonic.usermd.net/wp-content/uploads/2019/03/macbook_min.jpg");
+            background-position: 40% 25%;
+        }
+        &__image--contact{
+            display: block;
+            height: 100vh;
+            position: relative;
+            background-repeat: no-repeat;
+            background-image: url("http://krystain.exteriordemonic.usermd.net/wp-content/uploads/2019/02/sitting-1-1.jpg");
+            background-position: 55%;
+        }
     }
 }
 @mixin width-height{
@@ -50,6 +71,8 @@
         background:#3788C5;
         height:100px;
         display:flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
             h5{
                 text-align: center;
                 color:#A0C8E3;
@@ -63,6 +86,9 @@
         &:hover{
             text-decoration: none;
     }
+    .link--email:hover{
+        text-decoration: none !important;
+    }
 }  
 }
 @mixin button{
@@ -72,6 +98,7 @@
     text-decoration:none;
     text-align:center;
     transition: all 0.2s;
+    -webkit-transition: all .2s
 }
 @mixin column {
     padding:0 !important;

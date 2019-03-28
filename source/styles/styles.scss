@@ -13,6 +13,8 @@
 }
 .container{
     max-width:100% !important;
+    padding-left:0 !important;
+    padding-right:0 !important;
     &-fluid{
         padding-left: 10vw !important;
         padding-right: 10vw !important;
@@ -24,10 +26,6 @@
     }
 }
 .navbar{
-    &--size{
-        width:100%;
-        z-index:1000;
-    }
     &__item{
         padding-left: 2vw;
     }
@@ -35,17 +33,52 @@
         margin: 0;
         padding: 0.5vw 0;
         img{
+            -o-object-fit: cover;
             object-fit: cover;
+        }
+        &__list {
+            .menu-item:first-child {
+                .nav-link
+                {
+                    color: #d7006d !important
+                }
+            }
         }
     }
     &__list{
         @include right-navigator();
     }
+    &__logo--size{
+        img{
+            height:10vw;
+            width:39vw;
+        }
+    }
+}
+ul{
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+margin-bottom: 0;
+list-style: none;
+padding-left: 0;
+font-weight: 500;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
 }
 .background__image--computer{
     @include width-height();
     object-fit:cover;
 }
+
+.menu-item{
+    float: left;
+    & a{
+        color: black !important;
+    }
+}
+
 //styleguide
 .colors{
     @include position;
@@ -88,22 +121,21 @@
     }
 
 }
-//13.12.2018 added here:
 .technology{
     &__photo--size{
         @include background-photo;
     }
     &__row-reverse{
         flex-direction: row-reverse;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
     }
 }
 .row__column--position{
+    @include column();
     height:20vw;
     margin-left:2.5vw;
-    @include column();
-    &--third{
-        margin-top:$margin-top;
-    }
 }
 .columns{
     text-align:center;
@@ -120,6 +152,11 @@
         float:left;
         margin-left: 2vw;
         margin-top: 5vw;
+    }
+}
+.posts{
+    &--background{
+        background:#fafafa;
     }
 }
 .section{
@@ -139,19 +176,62 @@
         text-align:center;
         line-height: 2vw;
     }
+    &__button--posts{
+        background:#fafafa;
+    }
+}
+.background__image--contact{
+    width:100%;
 }
 @media(min-width:1280px){
-    .navbar__logo--size{
-        img{
-            height:10vw;
-            width:39vw;
+    //posts style
+    .posts__row{
+        padding-bottom: 3rem;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .post__photo{
+        padding-bottom:2vw;
+        padding-top:2vw;
+        padding-left:2vw ;
+        padding-right:2vw !important;
+    }
+    .row{
+        margin-left:0 !important;
+        margin-right:0 !important;
+    }
+    .post{
+        margin-left: 5vw;
+        margin-right: 5vw;
+        padding: 0 !important;
+        max-width: 100% !important;
+        border: 1px solid #cecece;
+        background: #fff;
+        margin-bottom: 3vw;
+        &__image{
+            width:100%;
         }
+        &_date{
+            text-align: left;
+        }
+        &_tags{
+            text-align: left;
+        }
+        &__content{
+            padding-left:2vw !important;
+            padding-top:2vw;
+            text-align:left;
+        } 
+    }
+    //contact style
+    .posty{
+        overflow: hidden;
     }
     .container{
         &__posts{
             padding-left:$padding;
             padding-right:$padding;
-            margin-top:2vw;
+            margin-top:4vw;
         }
     }
     .row__column--position{
@@ -162,8 +242,9 @@
         margin-top:2vw;
     }
     .columns{
+        background:#fafafa;
         &--size{
-            height: 55vw;
+            height: 57.5vw;
         }
         &__photo{
             width:7.5vw;
@@ -173,7 +254,7 @@
             margin-left:15%;
         }
         &__section{
-            padding: 10vw 2vw 0vw 2vw;
+            padding: 8vw 2vw 0;
         }
     }
     .technology{
@@ -181,8 +262,14 @@
             padding-top:5vw !important;
         }
         &__row{
-            margin-top:10vw;
+            margin-top:5vw;
         }
+        &__header{
+            padding-left:5vw;
+        }
+    }
+    .menu{
+        padding-right: 5vw;
     }
     .section{
         &__navbar{
@@ -196,6 +283,39 @@
     }
 }
 @media (min-width:992px) and (max-width:1279px){
+    //posts style
+    .posts__row{
+        padding-bottom: 3rem;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .post__photo{
+        padding-bottom:2vw;
+        padding-top:2vw;
+        padding-left:2vw ;
+        padding-right:2vw !important;
+    }
+    .row{
+        margin-left:0 !important;
+        margin-right:0 !important;
+    }
+    .post{
+        margin-left: 2vw;
+        margin-right: 2vw;
+        padding: 0 !important;
+        max-width: 100% !important;
+        border: 1px solid #cecece;
+        background: #fff;
+        margin-bottom: 3vw;
+        &__image
+        {
+            width:100%;
+        }
+        &__content{
+            text-align: left !important;
+        }
+    }
+    //end posts style
     .navbar__logo--size{
         img{
             height:10vw;
@@ -206,7 +326,7 @@
         &__posts{
             padding-left:$padding;
             padding-right:$padding;
-            margin-top:2vw;
+            margin-top:4vw;
         }
     }
     .row__column--position{
@@ -216,6 +336,7 @@
     .columns{
         &--size{
             height: 60vw;
+            margin-bottom: 5vw;
         }
         &__photo{
             width:7.5vw;
@@ -227,7 +348,7 @@
             padding-bottom: 3rem;
         }
         &__section{
-            padding: 7vw 2vw 0vw 2vw;
+            padding: 6vw 2vw 0;
         }
     }
     .technology{
@@ -237,6 +358,12 @@
         &__paragraph--position{
             padding-left:$padding;
             padding-right:$padding*2.4;
+        }
+        &__header{
+            padding-left:5vw;
+        }
+        &__content{
+            padding-top:2vw;
         }
     }
     .section{
@@ -257,6 +384,37 @@
     }
 }
 @media (min-width:768px) and (max-width:991px){
+    //posts style
+    .posts__row{
+        padding-bottom: 3rem;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .post__photo{
+        padding-bottom:2vw;
+        padding-top:2vw;
+        padding-left:2vw ;
+        padding-right:2vw !important;
+    }
+    .row{
+        margin-left:0 !important;
+        margin-right:0 !important;
+    }
+    .post{
+        padding:0 !important;
+        max-width: 100% !important;
+        border: 1px solid #cecece;
+        background:white;
+        margin-top:3vw;
+        &__image{
+            width:100%;
+        }
+        &__content{
+            text-align: left !important;
+        }
+    }
+
+    //end posts style
     .navbar__logo--size{
         img{
             height:10vw;
@@ -285,11 +443,12 @@
             margin-left:10vw;
         }
         &__section{
-            padding: 15vw 2vw 0vw 2vw;
+            padding: 12vw 2vw 0;
         } 
     }
     .row__column{
         &--position{
+            margin-top: 2vw;
             max-width:40% !important;
             height:30vw;
         }
@@ -302,6 +461,9 @@
        &__column--first{
             margin-top:10vw !important;
        }
+       &__header{
+           padding-left:5vw;
+       }
         &__content{
             padding-bottom:3rem;
             padding-top:3rem;
@@ -309,6 +471,9 @@
         &__paragraph--position{
             padding-left:$padding;
             padding-right:$padding*2.4;
+        }
+        &__header{
+            padding-left:5vw;
         }
     }
     .section{
@@ -319,48 +484,78 @@
             color:#7f7f7f;
         }
     }
-    .text{
-        line-height:20px;
-        font-size:2vw;
-    }
-    .title{
-        &--h2{
-            font-size:5vw;
-        }
-        &--h3{
-            font-size:2vw;
-        }
-    }
 }
 @media (max-width:767px){
+    .dropdown-menu{    
+        margin: .125rem 7% 0 !important;
+        width: 80% !important;
+            &.show{
+                font-size: 6vw;
+            }
+        }
+    .menu-item{
+        width: 100%;
+        text-align: center;
+    }
+    .posts__row{
+        padding-bottom: 3rem;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .post{
+        &__photo{
+            padding-bottom:2vw;
+            padding-top:2vw;
+            padding-left:2vw;
+            padding-right:2vw !important;
+        }
+        &__infos{
+            padding-top: 2vw;
+            font-size: 5vw;
+            padding-bottom: 2vw
+        }
+    }
+
+    .row{
+        margin-left:0 !important;
+        margin-right:0 !important;
+        &__column{
+            &--position{  
+                margin-top: 2.5vw;
+                height: 80vw;
+                margin-left: 2.5% !important;
+                max-width: 95%;
+            }
+        }
+    }
+    .post{
+        padding: 0 !important;
+        max-width: 95% !important;
+        border: 1px solid #cecece;
+        background: #fff;
+        margin: auto;
+        margin-top: 3vw;
+        &__image{
+            width:100%;
+        }
+    }
     .navbar__logo--size{
         img{
             height:15vw;
-            width:50vw;
+            width:80vw;
         }
-    }
-    .row__column{
-        &--position{  
-            height:70vw;
-            margin-left:0 !important;
-        }
-        &--third{
-            margin-top:$margin-top;
-        }
-        &--phones{
-            margin-top:2vw;
-        }
-
     }
     .columns{
         &--size{
-            height: 470vw;
+            height: 585vw;
+            margin-bottom:20vw;
         }
         &__row{
             padding-bottom: 3rem;
         }
         &__section{
-            padding: 30vw 2vw 2vw 2vw;
+            padding: 20vw 2vw 2vw;
         }
         &__photo{
             width:7.5vw;
@@ -368,7 +563,7 @@
     }
     .container{
         &__posts{
-            margin-top:2vw;
+            margin-top:10vw;
         }
     }
     .technology{
@@ -382,21 +577,6 @@
         &__paragraph--position{
             padding-left:$padding;
             padding-right:$padding*2.4;
-        }
-    }
-    .text{
-        line-height:40px;
-        font-size:4vw;
-    }
-    .title{
-        &--h1{
-            font-size:6vw !important;
-        }
-        &--h2{
-            font-size:5vw;
-        }
-        &--h3{
-            font-size:4vw;
         }
     }
     .section{
